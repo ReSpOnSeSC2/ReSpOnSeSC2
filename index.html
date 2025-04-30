@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #111827;
+            --light: #f3f4f6;
+            --accent: #7c3aed;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .projects {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .project-description {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .social-platforms {
+            padding: 4rem 0;
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .social-card {
+            background: #1f2937;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .social-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .social-name {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .social-username {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #6d28d9;
+        }
+        
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid, .social-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Portfolio</h1>
+            <p>Gaming Enthusiast | Healthcare Tech | Hospitality Innovation</p>
+        </div>
+    </header>
+    
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">My Websites</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="/api/placeholder/600/300" alt="Triune Health" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Triune Health</h3>
+                        <p class="project-description">A healthcare platform focused on holistic wellness solutions.</p>
+                        <a href="https://www.triunehealth.io" target="_blank" class="project-link">Visit Website</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="/api/placeholder/600/300" alt="Save Lodge" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Save Lodge</h3>
+                        <p class="project-description">An innovative hospitality and accommodation service.</p>
+                        <a href="https://www.savelodge.com" target="_blank" class="project-link">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="social-platforms">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">My Social Platforms</h2>
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3 class="social-name">TikTok</h3>
+                    <p class="social-username">@responsesc2</p>
+                    <a href="https://www.tiktok.com/@responsesc2" target="_blank" class="social-link">Follow Me</a>
+                </div>
+                
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fab fa-twitch"></i>
+                    </div>
+                    <h3 class="social-name">Twitch</h3>
+                    <p class="social-username">responsesc2</p>
+                    <a href="https://www.twitch.tv/responsesc2" target="_blank" class="social-link">Watch Streams</a>
+                </div>
+                
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3 class="social-name">YouTube</h3>
+                    <p class="social-username">@ReSpOnSeSC2</p>
+                    <a href="https://www.youtube.com/@ReSpOnSeSC2" target="_blank" class="social-link">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
