@@ -84,6 +84,15 @@
             border-bottom: 3px solid var(--primary);
         }
         
+        .project-img.app-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
         .project-content {
             padding: 1.5rem;
         }
@@ -112,6 +121,14 @@
         
         .project-link:hover {
             background-color: #1d4ed8;
+        }
+        
+        .project-link.playstore {
+            background-color: #00875f;
+        }
+        
+        .project-link.playstore:hover {
+            background-color: #006644;
         }
         
         .social-platforms {
@@ -202,7 +219,7 @@
     
     <section class="projects">
         <div class="container">
-            <h2 class="section-title">My Websites</h2>
+            <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="images/triune_billboard.png" alt="Triune Health" class="project-img">
@@ -228,6 +245,19 @@
                         <h3 class="project-title">Office Kanban</h3>
                         <p class="project-description">A modern task management system with drag-and-drop functionality for streamlined workflow organization.</p>
                         <a href="https://office-kanban-old-tr1i.vercel.app/" target="_blank" class="project-link">Visit Website</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img app-placeholder">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Triune Health App</h3>
+                        <p class="project-description">A comprehensive health and fitness mobile application designed to support your wellness journey.</p>
+                        <a href="https://play.google.com/store/apps/details?id=net.workoutgenerator.app" target="_blank" class="project-link playstore">
+                            <i class="fab fa-google-play"></i> Get on Play Store
+                        </a>
                     </div>
                 </div>
             </div>
