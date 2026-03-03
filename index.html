@@ -102,6 +102,7 @@
             width: 100%;
             object-fit: cover;
             border-bottom: 3px solid var(--primary);
+            object-position: top; /* Added to keep the face/logo in frame for screenshots */
         }
         
         .project-img.app-logo {
@@ -248,6 +249,16 @@
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="images/miawebsitescreenshot.jpg" alt="Mihaela Photography" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Mihaela Photography</h3>
+                        <p class="project-description">A professional gallery showcasing portrait, landscape, and event photography.</p>
+                        <a href="https://mihaelaphotography.digital" target="_blank" class="project-link">Visit Website</a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <img src="images/triune_billboard.png" alt="Triune Health" class="project-img">
                     <div class="project-content">
@@ -334,7 +345,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jonathan Layman. All Rights Reserved.</p>
+            <p>&copy; 2026 Jonathan Layman. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
