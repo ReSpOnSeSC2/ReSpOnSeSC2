@@ -11,26 +11,26 @@
             --light: #f3f4f6;
             --accent: #7c3aed;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/ReSpOnSe_header_4096x2304_q90.jpg');
             background-size: cover;
@@ -41,50 +41,50 @@
             text-align: center;
             position: relative;
         }
-        
+
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
         }
-        
+
         .response-logo {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        
+
         header p {
             font-size: 1.2rem;
             opacity: 0.95;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
-        
+
         .projects {
             padding: 4rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
             font-size: 2rem;
             color: var(--primary);
         }
-        
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .project-card {
             background: white;
             border-radius: 8px;
@@ -92,40 +92,40 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .project-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .project-img {
             height: 200px;
             width: 100%;
             object-fit: cover;
             border-bottom: 3px solid var(--primary);
-            object-position: top; /* Added to keep the face/logo in frame for screenshots */
+            object-position: top;
         }
-        
+
         .project-img.app-logo {
             object-fit: contain;
-            background-color: #f9fafb;
+            background-color: #0f172a; /* Darker background to match the logo style */
             padding: 1rem;
         }
-        
+
         .project-content {
             padding: 1.5rem;
         }
-        
+
         .project-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
-        
+
         .project-description {
             color: #4b5563;
             margin-bottom: 1rem;
         }
-        
+
         .project-link {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -136,31 +136,31 @@
             font-weight: 500;
             transition: background-color 0.3s ease;
         }
-        
+
         .project-link:hover {
             background-color: #1d4ed8;
         }
-        
+
         .project-link.playstore {
             background-color: #00875f;
         }
-        
+
         .project-link.playstore:hover {
             background-color: #006644;
         }
-        
+
         .social-platforms {
             padding: 4rem 0;
             background-color: var(--dark);
             color: white;
         }
-        
+
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+
         .social-card {
             background: #1f2937;
             border-radius: 8px;
@@ -168,27 +168,27 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
+
         .social-card:hover {
             transform: scale(1.05);
         }
-        
+
         .social-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--accent);
         }
-        
+
         .social-name {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .social-username {
             color: #9ca3af;
             margin-bottom: 1rem;
         }
-        
+
         .social-link {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -199,31 +199,31 @@
             font-weight: 500;
             transition: background-color 0.3s ease;
         }
-        
+
         .social-link:hover {
             background-color: #6d28d9;
         }
-        
+
         footer {
             background-color: #0f172a;
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
-        
+
         footer p {
             opacity: 0.8;
         }
-        
+
         @media (max-width: 768px) {
             .projects-grid, .social-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             header h1 {
                 font-size: 2rem;
             }
-            
+
             .response-logo {
                 width: 80px;
                 height: 80px;
@@ -239,12 +239,12 @@
                 <img src="images/ReSpOnSe_Image.png" alt="ReSpOnSeSC2 Logo" class="response-logo">
                 <div>
                     <h1>Jonathan Layman's Portfolio</h1>
-                    <p>Gaming Enthusiast | Healthcare Tech | Hospitality Innovation</p>
+                    <p>Gaming Enthusiast | Full Stack Developer | Real Estate Tech</p>
                 </div>
             </div>
         </div>
     </header>
-    
+
     <section class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
@@ -260,55 +260,29 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="images/triune_billboard.png" alt="Triune Health" class="project-img">
+                    <img src="images/workoutGenerator.jpg" alt="Workout Generator" class="project-img app-logo">
                     <div class="project-content">
-                        <h3 class="project-title">Triune Health</h3>
-                        <p class="project-description">A healthcare platform focused on holistic wellness solutions.</p>
-                        <a href="https://www.triunehealth.io" target="_blank" class="project-link">Visit Website</a>
+                        <h3 class="project-title">Workout Generator</h3>
+                        <p class="project-description">A high-performance web platform for generating data-driven, personalized strength training routines.</p>
+                        <a href="https://www.workoutgenerator.net" target="_blank" class="project-link">Visit Website</a>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <img src="images/savelodge1.png" alt="Save Lodge" class="project-img">
+                    <img src="images/workoutGenerator.jpg" alt="Workout Generator App" class="project-img app-logo">
                     <div class="project-content">
-                        <h3 class="project-title">Save Lodge</h3>
-                        <p class="project-description">An innovative hospitality and accommodation service.</p>
-                        <a href="https://www.savelodge.com" target="_blank" class="project-link">Visit Website</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="images/kanbanscreenshot2.png" alt="Office Kanban" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">Office Kanban</h3>
-                        <p class="project-description">A modern task management system with drag-and-drop functionality for streamlined workflow organization.</p>
-                        <a href="https://office-kanban-old-tr1i.vercel.app/" target="_blank" class="project-link">Visit Website</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="images/ai-collab.png" alt="AI-Collab Pro" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">AI-Collab Pro</h3>
-                        <p class="project-description">A collaborative AI platform that connects multiple AI models in a unified interface for enhanced productivity and deeper insights.</p>
-                        <a href="https://ai-collab-pro.vercel.app/" target="_blank" class="project-link">Visit Platform</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="images/logo.png" alt="Triune Health App" class="project-img app-logo">
-                    <div class="project-content">
-                        <h3 class="project-title">Triune Health App</h3>
-                        <p class="project-description">A comprehensive health and fitness mobile application designed to support your wellness journey.</p>
+                        <h3 class="project-title">Workout Generator App</h3>
+                        <p class="project-description">Mobile application designed for tracking macros and generating daily workout sessions on the go.</p>
                         <a href="https://play.google.com/store/apps/details?id=net.workoutgenerator.app" target="_blank" class="project-link playstore">
                             <i class="fab fa-google-play"></i> Get on Play Store
                         </a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
-    
+
     <section class="social-platforms">
         <div class="container">
             <h2 class="section-title" style="color: white;">My Social Platforms</h2>
@@ -321,7 +295,7 @@
                     <p class="social-username">@responsesc2</p>
                     <a href="https://www.tiktok.com/@responsesc2" target="_blank" class="social-link">Follow Me</a>
                 </div>
-                
+
                 <div class="social-card">
                     <div class="social-icon">
                         <i class="fab fa-twitch"></i>
@@ -330,7 +304,7 @@
                     <p class="social-username">responsesc2</p>
                     <a href="https://www.twitch.tv/responsesc2" target="_blank" class="social-link">Watch Streams</a>
                 </div>
-                
+
                 <div class="social-card">
                     <div class="social-icon">
                         <i class="fab fa-youtube"></i>
@@ -342,7 +316,7 @@
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2026 Jonathan Layman. All Rights Reserved.</p>
