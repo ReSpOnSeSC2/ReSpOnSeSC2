@@ -11,26 +11,22 @@
             --light: #f3f4f6;
             --accent: #7c3aed;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
         header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/ReSpOnSe_header_4096x2304_q90.jpg');
             background-size: cover;
@@ -41,62 +37,54 @@
             text-align: center;
             position: relative;
         }
-
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
         }
-
         .response-logo {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-
         header p {
             font-size: 1.2rem;
             opacity: 0.95;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
-
         .projects {
             padding: 4rem 0;
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
             font-size: 2rem;
             color: var(--primary);
         }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .project-card {
             background: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
-
         .project-card:hover {
             transform: translateY(-10px);
         }
-
         .project-img {
             height: 200px;
             width: 100%;
@@ -104,28 +92,51 @@
             border-bottom: 3px solid var(--primary);
             object-position: top;
         }
-
         .project-img.app-logo {
             object-fit: contain;
-            background-color: #0f172a; /* Darker background to match the logo style */
+            background-color: #0f172a;
             padding: 1rem;
         }
-
+        .project-img.banner {
+            object-fit: contain;
+            background-color: #0f172a;
+            padding: 0.5rem;
+        }
         .project-content {
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
-
         .project-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
-
         .project-description {
             color: #4b5563;
             margin-bottom: 1rem;
+            flex: 1;
         }
-
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+        .project-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background-color: #e0e7ff;
+            color: #3730a3;
+            font-weight: 500;
+        }
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
         .project-link {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -136,31 +147,34 @@
             font-weight: 500;
             transition: background-color 0.3s ease;
         }
-
         .project-link:hover {
             background-color: #1d4ed8;
         }
-
         .project-link.playstore {
             background-color: #00875f;
         }
-
         .project-link.playstore:hover {
             background-color: #006644;
         }
-
+        .project-link.secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .project-link.secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
         .social-platforms {
             padding: 4rem 0;
             background-color: var(--dark);
             color: white;
         }
-
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
         .social-card {
             background: #1f2937;
             border-radius: 8px;
@@ -168,27 +182,22 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-
         .social-card:hover {
             transform: scale(1.05);
         }
-
         .social-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--accent);
         }
-
         .social-name {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
         }
-
         .social-username {
             color: #9ca3af;
             margin-bottom: 1rem;
         }
-
         .social-link {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -199,31 +208,25 @@
             font-weight: 500;
             transition: background-color 0.3s ease;
         }
-
         .social-link:hover {
             background-color: #6d28d9;
         }
-
         footer {
             background-color: #0f172a;
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
-
         footer p {
             opacity: 0.8;
         }
-
         @media (max-width: 768px) {
             .projects-grid, .social-grid {
                 grid-template-columns: 1fr;
             }
-
             header h1 {
                 font-size: 2rem;
             }
-
             .response-logo {
                 width: 80px;
                 height: 80px;
@@ -244,45 +247,63 @@
             </div>
         </div>
     </header>
-
     <section class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
-
+                <div class="project-card">
+                    <img src="images/sc2tools_banner.jpg" alt="SC2Tools — local-first StarCraft II replay analyzer" class="project-img banner">
+                    <div class="project-content">
+                        <h3 class="project-title">SC2Tools &mdash; SC2 Meta Analyzer</h3>
+                        <p class="project-description">A local-first StarCraft II replay analyzer that classifies every ladder game by build, race, map, and outcome. Includes opponent scouting via SC2Pulse, ML build prediction, and 15 ready-to-paste OBS overlays for streamers.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">SQLite</span>
+                            <span class="project-tag">Electron</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ReSpOnSeSC2/sc2tools" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+                            <a href="https://github.com/ReSpOnSeSC2/sc2tools#quick-start" target="_blank" class="project-link secondary">Quick Start</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card">
                     <img src="images/miawebsitescreenshot.png" alt="Mihaela Photography" class="project-img">
                     <div class="project-content">
                         <h3 class="project-title">Mihaela Photography</h3>
                         <p class="project-description">A professional gallery showcasing portrait, landscape, and event photography.</p>
-                        <a href="https://mihaelaphotography.digital" target="_blank" class="project-link">Visit Website</a>
+                        <div class="project-links">
+                            <a href="https://mihaelaphotography.digital" target="_blank" class="project-link">Visit Website</a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <img src="images/workoutGenerator.jpg" alt="Workout Generator" class="project-img app-logo">
                     <div class="project-content">
                         <h3 class="project-title">Workout Generator</h3>
                         <p class="project-description">A high-performance web platform for generating data-driven, personalized strength training routines.</p>
-                        <a href="https://www.workoutgenerator.net" target="_blank" class="project-link">Visit Website</a>
+                        <div class="project-links">
+                            <a href="https://www.workoutgenerator.net" target="_blank" class="project-link">Visit Website</a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <img src="images/workoutGenerator.jpg" alt="Workout Generator App" class="project-img app-logo">
                     <div class="project-content">
                         <h3 class="project-title">Workout Generator App</h3>
                         <p class="project-description">Mobile application designed for tracking macros and generating daily workout sessions on the go.</p>
-                        <a href="https://play.google.com/store/apps/details?id=net.workoutgenerator.app" target="_blank" class="project-link playstore">
-                            <i class="fab fa-google-play"></i> Get on Play Store
-                        </a>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=net.workoutgenerator.app" target="_blank" class="project-link playstore">
+                                <i class="fab fa-google-play"></i> Get on Play Store
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
-
     <section class="social-platforms">
         <div class="container">
             <h2 class="section-title" style="color: white;">My Social Platforms</h2>
@@ -295,7 +316,6 @@
                     <p class="social-username">@responsesc2</p>
                     <a href="https://www.tiktok.com/@responsesc2" target="_blank" class="social-link">Follow Me</a>
                 </div>
-
                 <div class="social-card">
                     <div class="social-icon">
                         <i class="fab fa-twitch"></i>
@@ -304,7 +324,6 @@
                     <p class="social-username">responsesc2</p>
                     <a href="https://www.twitch.tv/responsesc2" target="_blank" class="social-link">Watch Streams</a>
                 </div>
-
                 <div class="social-card">
                     <div class="social-icon">
                         <i class="fab fa-youtube"></i>
@@ -316,7 +335,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2026 Jonathan Layman. All Rights Reserved.</p>
